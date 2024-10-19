@@ -1,0 +1,54 @@
+/* css Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+/* css Reset */
+/* Roots */
+:root {
+  --body--color: #d3d3d3;
+  --items--bg--color: white;
+  --primary--color: black;
+  --secondary--color: rgb(104, 103, 103);
+  --blue--primary: #add8e6;
+  --pink--primary: #ffb6c1;
+  --blue--secondary: #32476e;
+  --pink--secondary: #dc143c;
+  --green--primary: #90ee90;
+  --green--secondary: #228b22;
+}
+body {
+  background-color: var(--body--color);
+}
+a {
+  text-decoration: none;
+}
+.badge {
+  border: none;
+  border-radius: 5px;
+  padding: 0.2rem;
+  display: inline-block;
+  font-size: 0.5rem;
+  background-color: var(--blue--primary);
+  color: var(--blue--secondary);
+  height: auto;
+}
+.badge_primary {
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+.badge_secondary {
+  background-color: var(--green--primary);
+  color: var(--green--secondary);
+  font-weight: 700;
+  font-size: 0.7rem;
+}
+.badge_danger {
+  background-color: var(--pink--primary);
+  color: var(--pink--secondary);
+  font-size: 0.7rem;
+}

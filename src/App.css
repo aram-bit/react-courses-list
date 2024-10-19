@@ -1,0 +1,116 @@
+.app {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.header {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.category {
+  display: flex;
+  justify-content: space-between;
+}
+.category_item > a {
+  margin-right: 2rem;
+  font-weight: 700;
+  color: var(--secondary--color);
+  cursor: pointer;
+  display: block;
+  padding: 1rem 0;
+  opacity: 0.5;
+}
+.category_item > a:hover {
+  background-color: var(--pink--primary);
+  color: var(--pink--secondary);
+  border-radius: 15px;
+}
+.courses_list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin: 0.5rem;
+}
+.course_item {
+  background-color: var(--items--bg--color);
+  display: grid;
+  width: 90%;
+  border-radius: 1rem;
+  gap: 0.5rem;
+  padding: 1rem;
+  grid-template-columns: 2fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  max-width: 30rem;
+}
+.course_item-content > * {
+  margin-left: 0;
+}
+.course_item-content > h3 {
+  font-size: 1rem;
+}
+.course_item-content > p {
+  font-size: 0.5rem;
+  color: var(--secondary--color);
+}
+.course_item-badge {
+  display: flex;
+  gap: 0.5rem;
+}
+.course_item-date {
+  font-size: 0.8rem;
+}
+.course_item-img {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.course_item-img > img {
+  width: 100%;
+  border-radius: 1rem;
+}
+.course_item-content {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  display: grid;
+  gap: 0.5rem;
+  align-items: center;
+}
+.course_item-detail {
+  grid-column: 3/4;
+  grid-row: 1/3;
+  display: grid;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .category_item > a {
+    font-size: 2rem;
+    margin-right: 4rem;
+  }
+  .header h2 {
+    font-size: 3.5rem;
+  }
+  .courses_list {
+    grid-template-columns: 1fr 1fr;
+  }
+  .course_item {
+    width: 100%;
+    max-width: 40rem;
+  }
+  .course_item-date {
+    font-size: 1rem;
+  }
+  .course_item-content > p {
+    font-size: 0.6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .courses_list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .course_item-content > p {
+    font-size: 0.6rem;
+  }
+}
